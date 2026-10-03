@@ -1,11 +1,10 @@
-##################### Extra Hard Starting Project ######################
-MY_EMAIL = "silittleroscoe@gmail.com"
-PASSWORD = "qpebkvcnlfdpgxll"
-
 import pandas
 import datetime as dt
 import random
 import smtplib
+import os
+MY_EMAIL = os.environ.get("MY_EMAIL")
+PASSWORD = os.environ.get("PASSWORD")
 
 data = pandas.read_csv("birthdays.csv")
 now = dt.datetime.now()
